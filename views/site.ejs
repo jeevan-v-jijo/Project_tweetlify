@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href link="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Site</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="section">
+        <div class="user">
+            <h1><ion-icon name="person-circle-outline"></ion-icon> <%=username%></h1>
+            
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Public</h3>
+                <% for(var i=0 ;i < notes.length;i++){ %>     
+                    <form action="/note" method="post">
+                        <div class ="item">
+                            <h2><%= notes[i].Note %></h2>
+                            <br>
+                            
+                        </div>
+                    </form>
+                   
+                    <% } %>
+                
+                <form class="item" action="/note" method="post">
+                    <input type="text" name="note" placeholder="What do you have to say to the world">
+                    <button type="submit" class="btn">+</button>
+                </form>
+                
+            </div>
+            <!-- <div class="card">
+                <h3>Private</h3>
+                
+                    <form action="/private" method="post">
+                        <div class ="item">
+                            <h2></h2>
+                        </div>
+                    </form>
+                <form class="item" action="/private" method="post">
+                    <input type="text" name="task" placeholder="Input your task here">
+                    <button type="submit">+</button>
+                </form>
+            </div> -->
+        </div>
+        <div class="circle"></div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
