@@ -39,7 +39,7 @@ app.use(express.static("images"))
 app.set('view engine','ejs')
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/Tweetlify",{useNewUrlParser:true})
+mongoose.connect("mongodb+srv://jeevanvjijo07:123!@#qweQWE@cluster0.fzipibh.mongodb.net/Tweetlify",{useNewUrlParser:true})
 
 
 //User schema
