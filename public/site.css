@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    list-style: none;
+    text-decoration: none;
+    
+}
+body{
+    overflow: hidden;
+
+}
+
+ion-icon{
+    position:relative;
+    left:10px;
+    top:10px;
+    transform: scale(1.1);
+}
+.user h1{
+    position:absolute;
+    left:150px;
+
+}
+
+.section{
+    min-height: 780px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 8;
+    color: #fff;
+    /* background-color: #b63f6e; */
+    background: url("site-background.jpg");
+    background-size: cover;
+    
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    overflow-y: scroll;
+
+}
+
+.section .user{
+    display: flex;
+    justify-content: none;
+    margin: 5rem 0;
+
+}
+.card h3{
+    font-size: 50px;
+    text-align: center;
+}
+
+.section .user h1{
+    font-size: 3.7rem;
+    line-height: 3.7rem;
+    letter-spacing: 1px;
+    width:40%;
+}
+
+.section .user p{
+    width:40%;
+
+}
+.btn{
+    transform:scale3d(4,2,1);
+    position:relative;
+    left:200px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    padding:20px;
+    
+
+}
+
+.cards .card{
+    height: 100%;
+    width: 100%;
+    border: 0.5px solid rgba(255,255,255,0.5);
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 8%;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    overflow: hidden;
+    transition: .6s;
+}
+
+
+.cards .card:after{
+    position: absolute;
+    content: "";
+    height: 40%;
+    width: 8%;
+    top: 30%;
+    right: -4%;
+    background-color: #fff;
+    z-index: -1;
+    border-radius: 28px;
+    transition: .2s;
+}
+
+.cards .card:hover{
+    color: #b63f6e;
+}
+
+.cards .card:hover:after{
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+
+}
+
+ .cards .card h1{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+
+}
+
+.circle{
+    height: 750px;
+    width: 750px;
+    border: 150px solid rgba(255,255,255,0.1);
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    border-radius: 50%;
+}
+
+
+@media(max-width:1200px){
+    .cards{
+       grid-template-columns: repeat(2,1fr);
+       margin: 0 auto;
+   }
+
+}
+
+input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+  }
+  
+.item{
+    border:0 0 0 20px black;
+}
+
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #A683E3;
+  }
+
+@media(max-width:1100px){
+    .section .user h1{
+        font-size: 3.4 rem;
+
+    }
+    .section .user{
+        flex-direction: column;
+        align-items: center;
+     }
+
+     
+    .section .user h1,
+    .section .user p{
+        width:100%;
+        text-align: center;
+    }
+    .section .user h1{
+        font-size: 2.5rem;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+    }
+    .circle{
+        display: none;
+    }
+
+}
+
+@media(max-width:900px){
+   
+    .cards{
+       grid-template-columns: repeat(1,1fr);
+       margin: 0 auto;
+   }
+   .card{
+    width: 80%;
+   }
+   .section .user h1{
+        font-size: 2rem;
+   }
+}
